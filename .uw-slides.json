@@ -1,7 +1,7 @@
 {
-  "plugin_version": "0.6.2",
+  "plugin_version": "0.7.0",
   "brand": "cloudbank",
-  "scaffolded_at": "2026-11-05",
+  "scaffolded_at": "2026-11-06",
   "catalog": null,
-  "plugin_dir": "/home/arendta/.claude/plugins/cache/uw-slide-deck/uw-slides/0.6.2"
+  "plugin_dir": "/home/arendta/.copilot/installed-plugins/uw-slide-deck/uw-slides"
 }

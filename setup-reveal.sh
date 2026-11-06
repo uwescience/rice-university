@@ -11,6 +11,8 @@
 
 REVEAL_VERSION="6.0.2"
 DIST_URL="https://cdn.jsdelivr.net/npm/reveal.js@${REVEAL_VERSION}/dist"
+# reveal.js 6.x ships the speaker-notes plugin at dist/plugin/notes.js
+# (5.x had plugin/notes/notes.js). It is saved locally as plugin/notes/notes.js.
 PLUGIN_URL="https://cdn.jsdelivr.net/npm/reveal.js@${REVEAL_VERSION}/dist/plugin"
 
 DECK_DIR="${1:-.}"
