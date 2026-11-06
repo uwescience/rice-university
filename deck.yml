@@ -2,18 +2,66 @@
 # Only a restricted YAML subset is supported (no trailing comments on a
 # value line). Validate with:
 #   python3 "$UW_SLIDES_HOME/tools/deckparse.py" deck deck.yml
-title: "rice-university"
-audience: "Who this is for"
+title: "Helping Researchers Onboard to the Commercial Cloud"
+audience: "Rice University research IT professionals who know traditional HPC workflows but are new to AWS and other commercial clouds"
 # Total talk length in minutes (integer).
-duration: 30
+duration: 90
 # presenter: "Name"
 # Quote dates: date: "2026-01-31"
 # Catalog version pin, if the deck uses catalog slides: catalog: v1.0.0
 
 objectives:
-  obj-1: "What the audience should be able to do or understand afterwards"
+  obj-1: "Explain what the commercial cloud adds to research and teaching, and how CloudBank removes the access and billing barriers"
+  obj-2: "Guide a researcher through the decision path, from whether the cloud fits to a CloudBank allocation, onboarding and a planned exit"
+  obj-3: "Describe how researchers can deploy and scale existing Python and ML work in the cloud with generative AI, Ray and SkyPilot"
+  obj-4: "Anticipate common cloud pitfalls and steer researchers toward guardrails and open, shared resources"
 
 # Slide order. Each ID needs slides/<id>.md and becomes content/<id>.html.
 slides:
   - title
-  - example-slide
+  - agenda
+  - intro-divider
+  - why-cloud
+  - hpc-vs-cloud
+  - what-weve-heard
+  - what-is
+  - why-choose
+  - research-and-classroom
+  - cloud-for-teaching
+  - hub-vs-laptop
+  - decision-divider
+  - interview-simulation
+  - decision-flowchart
+  - eligibility
+  - llm-hpc-vs-cloud
+  - award-tiers
+  - nairr
+  - process
+  - exit-plan
+  - demo-divider
+  - demo-roadmap
+  - rice-use-case
+  - genai-gaps
+  - genai-prompt
+  - deploy-with-ai
+  - scaling-divider
+  - scaling-ladder
+  - ray-code
+  - skypilot-code
+  - pytorch-multinode
+  - place-your-workload
+  - pitfalls-divider
+  - pitfalls-table
+  - costs
+  - key-safety
+  - wrong-service
+  - spot-the-pitfall
+  - next-divider
+  - by-the-numbers
+  - share-flow
+  - shared-llm-tools
+  - what-rice-shares
+  - recap
+  - getting-help
+  - feedback
+  - thank-you
