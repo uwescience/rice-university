@@ -1,0 +1,210 @@
+<section data-slide="decision-flowchart"
+         data-layout="custom"
+         data-brief-hash="77186a6c95ff"
+         data-generated-by="uw-slides@0.6.0"
+         aria-label="Slide 14: Decision flowchart"
+         class="slide">
+
+  <div class="layout">
+    <h1>Start with the research problem, not the platform</h1>
+
+    <ol class="flow">
+      <li class="node decision">
+        <span class="marker" aria-hidden="true">?</span>
+        <p class="label">Is the cloud the right tool?</p>
+        <p class="no"><strong>No</strong>campus HPC, or ACCESS and NAIRR on-premises resources</p>
+        <span class="yes" aria-hidden="true">Yes</span>
+      </li>
+      <li class="node decision">
+        <span class="marker" aria-hidden="true">?</span>
+        <p class="label">Is CloudBank the right route?</p>
+        <p class="no"><strong>No</strong>a departmental or institutional cloud account</p>
+        <span class="yes" aria-hidden="true">Yes</span>
+      </li>
+      <li class="node stage">
+        <span class="marker" aria-hidden="true">1</span>
+        <p class="label">Allocation</p>
+        <p class="desc">ACCESS (Explore, Discover, Accelerate) or the NAIRR Pilot</p>
+      </li>
+      <li class="node stage">
+        <span class="marker" aria-hidden="true">2</span>
+        <p class="label">Onboard</p>
+        <p class="desc">CloudBank opens accounts on AWS, Google Cloud, Azure or IBM Cloud</p>
+      </li>
+      <li class="node stage">
+        <span class="marker" aria-hidden="true">3</span>
+        <p class="label">Work</p>
+        <p class="desc">build, run and watch spending</p>
+      </li>
+      <li class="node stage">
+        <span class="marker" aria-hidden="true">4</span>
+        <p class="label">Exit</p>
+        <p class="desc">archive, publish and close accounts</p>
+      </li>
+    </ol>
+  </div>
+
+  <style>
+    section[data-slide="decision-flowchart"] {
+      --bg: var(--slide-bg-light);
+      --fg: var(--slide-text);
+      --fg-muted: var(--slide-text-muted);
+      --head: var(--slide-heading);
+      --panel: var(--slide-bg-subtle);
+      background: var(--bg);
+      color: var(--fg);
+    }
+
+    section[data-slide="decision-flowchart"]::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: var(--slide-accent-size);
+      background: var(--slide-accent);
+    }
+
+    section[data-slide="decision-flowchart"] .layout {
+      flex: 1;
+      min-width: 0;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      padding: clamp(2rem, 4vw, 4rem) clamp(1.5rem, 4vw, 5rem) clamp(2rem, 4vw, 4rem);
+    }
+
+    section[data-slide="decision-flowchart"] h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 3.6vw, 3.5rem);
+      font-weight: var(--slide-heading-weight);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      text-transform: var(--slide-heading-transform);
+      color: var(--head);
+      margin: 0 0 clamp(1.5rem, 3vw, 3.5rem);
+    }
+
+    section[data-slide="decision-flowchart"] .flow {
+      position: relative;
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      margin: clamp(1.5rem, 5vw, 6rem) 0 0;
+      gap: clamp(0.5rem, 1vw, 1.25rem);
+      align-items: start;
+    }
+
+    /* One continuous path line runs behind the markers */
+    section[data-slide="decision-flowchart"] .flow::before {
+      content: "";
+      position: absolute;
+      top: calc(var(--marker) / 2 - 2px);
+      left: calc(100% / 12);
+      right: calc(100% / 12);
+      height: 4px;
+      background: var(--slide-accent);
+    }
+
+    section[data-slide="decision-flowchart"] .flow {
+      --marker: clamp(3.5rem, 4.5vw, 5rem);
+    }
+
+    section[data-slide="decision-flowchart"] .node {
+      position: relative;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    section[data-slide="decision-flowchart"] .marker {
+      position: relative;
+      z-index: 1;
+      width: var(--marker);
+      height: var(--marker);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--slide-text-on-dark);
+      margin-bottom: var(--space-2);
+    }
+
+    section[data-slide="decision-flowchart"] .marker::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--slide-bg-dark);
+      z-index: -1;
+    }
+
+    section[data-slide="decision-flowchart"] .decision .marker::before {
+      transform: rotate(45deg) scale(0.72);
+    }
+
+    section[data-slide="decision-flowchart"] .stage .marker::before {
+      border-radius: 50%;
+    }
+
+    section[data-slide="decision-flowchart"] .label {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 1.7vw, 1.875rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--head);
+      margin: 0;
+    }
+
+    section[data-slide="decision-flowchart"] .desc {
+      font-size: clamp(1.5rem, 1.5vw, 1.75rem);
+      line-height: 1.3;
+      margin: var(--space-1) 0 0;
+    }
+
+    section[data-slide="decision-flowchart"] .yes {
+      position: absolute;
+      top: calc(var(--marker) / 2 - 2.5rem);
+      right: calc(-1 * clamp(0.5rem, 1vw, 1.25rem) - 1.5rem);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--slide-text-muted);
+      background: var(--bg);
+      padding: 0 0.25rem;
+      z-index: 2;
+    }
+
+    section[data-slide="decision-flowchart"] .no {
+      position: relative;
+      margin-top: clamp(1.25rem, 2vw, 2rem);
+      padding: clamp(0.5rem, 0.8vw, 0.9rem);
+      background: var(--panel);
+      border: 3px dashed var(--slide-text-muted);
+      font-size: clamp(1.5rem, 1.5vw, 1.75rem);
+      line-height: 1.3;
+      text-align: left;
+      width: 100%;
+    }
+
+    section[data-slide="decision-flowchart"] .no::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 100%;
+      height: clamp(1.25rem, 2vw, 2rem);
+      border-left: 3px dashed var(--slide-text-muted);
+    }
+
+    section[data-slide="decision-flowchart"] .no strong {
+      display: block;
+      font-size: 1.5rem;
+      color: var(--slide-text-muted);
+    }
+  </style>
+  <aside class="notes">
+    <p>Draw it left to right with the two "No" exits dropping below the main path.</p>
+    <p>VERIFY: the "No" branches reflect the planner's reading of the eligibility slide; confirm they match how eScience advises clients and what Rice offers on campus.</p>
+  </aside>
+</section>

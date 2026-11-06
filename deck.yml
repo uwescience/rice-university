@@ -13,7 +13,7 @@ duration: 90
 objectives:
   obj-1: "Explain what the commercial cloud adds to research and teaching, and how CloudBank removes the access and billing barriers"
   obj-2: "Guide a researcher through the decision path, from whether the cloud fits to a CloudBank allocation, onboarding and a planned exit"
-  obj-3: "Describe how researchers can deploy and scale existing Python and ML work in the cloud with generative AI, Ray and SkyPilot"
+  obj-3: "Use generative AI to deploy cloud solutions, and design projects around storage, compute and network at the right level of abstraction"
   obj-4: "Anticipate common cloud pitfalls and steer researchers toward guardrails and open, shared resources"
 
 # Slide order. Each ID needs slides/<id>.md and becomes content/<id>.html.
@@ -45,11 +45,14 @@ slides:
   - genai-prompt
   - deploy-with-ai
   - scaling-divider
-  - scaling-ladder
-  - ray-code
+  - three-resources
+  - abstraction-levels
+  - ai-three-ways
+  - same-client-code
   - skypilot-code
-  - pytorch-multinode
-  - place-your-workload
+  - scaling-ladder
+  - build-learn-advise
+  - try-each-level
   - pitfalls-divider
   - pitfalls-table
   - costs

@@ -1,0 +1,102 @@
+<section data-slide="skypilot-code"
+         data-layout="code"
+         data-brief-hash="bf1e3bfb66d0"
+         data-generated-by="uw-slides@0.6.0"
+         aria-label="Slide 32: SkyPilot serving vLLM"
+         class="slide">
+
+  <div class="layout">
+    <h1 data-slot="key-message">SkyPilot: describe the job, not the servers</h1>
+
+    <pre data-slot="code"><code>resources:
+  accelerators: A10G:1
+  ports: 8000
+setup: pip install vllm
+run: vllm serve $MODEL --port 8000</code></pre>
+
+    <p class="caption" data-slot="caption">sky launch finds an A10G, installs vLLM and serves the model on port 8000.</p>
+    <p class="source" data-slot="source">Source: SkyPilot documentation, docs.skypilot.co</p>
+  </div>
+
+  <style>
+    section[data-slide="skypilot-code"] {
+      --bg: var(--slide-bg-light);
+      --fg: var(--slide-text);
+      --fg-muted: var(--slide-text-muted);
+      --head: var(--slide-heading);
+      --code-bg: var(--slide-bg-deep);
+      --code-fg: var(--slide-text-on-dark);
+      background: var(--bg);
+      color: var(--fg);
+    }
+
+    section[data-slide="skypilot-code"]::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: var(--slide-accent-size);
+      background: var(--slide-accent);
+    }
+
+    section[data-slide="skypilot-code"] .layout {
+      flex: 1;
+      min-width: 0;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      padding: clamp(2.5rem, 6vw, 6rem) clamp(2rem, 6vw, 7.5rem) clamp(3.5rem, 6vw, 6rem);
+    }
+
+    section[data-slide="skypilot-code"] h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 3.6vw, 3.5rem);
+      font-weight: var(--slide-heading-weight);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      text-transform: var(--slide-heading-transform);
+      color: var(--head);
+      margin: 0 0 var(--space-5);
+    }
+
+    section[data-slide="skypilot-code"] pre {
+      background: var(--code-bg);
+      color: var(--code-fg);
+      border-left: var(--slide-accent-size) solid var(--slide-accent);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      max-width: 100%;
+      margin: 0;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    section[data-slide="skypilot-code"] code {
+      font-family: var(--font-mono);
+      font-size: clamp(1.5rem, 2.4vw, 2.25rem);
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    section[data-slide="skypilot-code"] .caption {
+      font-size: clamp(1.5rem, 1.8vw, 1.75rem);
+      line-height: 1.4;
+      color: var(--fg-muted);
+      margin: var(--space-3) 0 0;
+    }
+
+    section[data-slide="skypilot-code"] .source {
+      position: absolute;
+      left: clamp(2rem, 6vw, 7.5rem);
+      right: clamp(2rem, 6vw, 7.5rem);
+      bottom: clamp(1rem, 2.5vw, 2.5rem);
+      font-size: clamp(1rem, 1.1vw, 1.25rem);
+      line-height: 1.3;
+      color: var(--fg-muted);
+      margin: 0;
+    }
+  </style>
+  <aside class="notes">
+    <p>MODEL is passed at launch (sky launch --env MODEL=...). In the live run, add --api-key to the vllm serve command and an autostop setting; they are left off the slide for space.</p>
+    <p>VERIFY: check the YAML keys against the SkyPilot version used, that the chosen model fits on one A10G, and the docs URL.</p>
+  </aside>
+</section>

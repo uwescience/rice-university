@@ -1,0 +1,151 @@
+<section data-slide="interview-simulation"
+         data-layout="two-column"
+         data-brief-hash="cc2c409320da"
+         data-generated-by="uw-slides@0.6.0"
+         aria-label="Slide 13: Role-play: a first consultation"
+         class="slide">
+
+  <div class="layout">
+    <h1 data-slot="key-message">Role-play: a researcher asks for the cloud</h1>
+
+    <div class="columns">
+      <div class="main" data-slot="main">
+        <ul>
+          <li>Environmental engineer studying hurricane damage</li>
+          <li>Wants to fine-tune a model on storm imagery</li>
+          <li>Wants a public dashboard of the results</li>
+          <li>Says: “I think I need the cloud.”</li>
+        </ul>
+      </div>
+
+      <aside class="side" data-slot="side">
+        <h2>Listen for</h2>
+        <p>The questions that decide each branch of the flowchart. At each pause, answer in the chat first.</p>
+      </aside>
+    </div>
+
+  </div>
+
+  <style>
+    section[data-slide="interview-simulation"] {
+      --bg: var(--slide-bg-light);
+      --fg: var(--slide-text);
+      --fg-muted: var(--slide-text-muted);
+      --head: var(--slide-heading);
+      --panel: var(--slide-bg-subtle);
+      background: var(--bg);
+      color: var(--fg);
+    }
+
+    section[data-slide="interview-simulation"]::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: var(--slide-accent-size);
+      background: var(--slide-accent);
+    }
+
+    section[data-slide="interview-simulation"] .layout {
+      flex: 1;
+      min-width: 0;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      padding: clamp(2.5rem, 6vw, 6rem) clamp(2rem, 6vw, 7.5rem) clamp(3.5rem, 6vw, 6rem);
+    }
+
+    section[data-slide="interview-simulation"] h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 3.6vw, 3.5rem);
+      font-weight: var(--slide-heading-weight);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      text-transform: var(--slide-heading-transform);
+      color: var(--head);
+      margin: 0 0 var(--space-6);
+    }
+
+    section[data-slide="interview-simulation"] .columns {
+      flex: 1;
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: clamp(2rem, 4vw, 4rem);
+      align-items: start;
+    }
+
+    section[data-slide="interview-simulation"] .main,
+    section[data-slide="interview-simulation"] .side {
+      min-width: 0;
+      font-size: clamp(1.5rem, 2.4vw, 2.375rem);
+      line-height: 1.4;
+    }
+
+    section[data-slide="interview-simulation"] .side {
+      background: var(--panel);
+      border-left: var(--slide-accent-size) solid var(--slide-accent);
+      padding: var(--space-4);
+    }
+
+    section[data-slide="interview-simulation"] h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 2.8vw, 2.625rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--head);
+      margin: 0 0 var(--space-2);
+    }
+
+    section[data-slide="interview-simulation"] p {
+      margin: 0;
+    }
+
+    section[data-slide="interview-simulation"] ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    section[data-slide="interview-simulation"] li {
+      position: relative;
+      padding-left: 1.5em;
+      margin: 0 0 var(--space-4);
+    }
+
+    section[data-slide="interview-simulation"] li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 0.6em;
+      height: 0.6em;
+      border-radius: 50%;
+      background: var(--slide-accent);
+    }
+
+    section[data-slide="interview-simulation"] .source {
+      position: absolute;
+      left: clamp(2rem, 6vw, 7.5rem);
+      right: clamp(2rem, 6vw, 7.5rem);
+      bottom: clamp(1rem, 2.5vw, 2.5rem);
+      font-size: clamp(1rem, 1.1vw, 1.25rem);
+      line-height: 1.3;
+      color: var(--fg-muted);
+      margin: 0;
+    }
+  </style>
+  <aside class="notes">
+    <p>Roles: Presenter A plays the researcher, Presenter B plays the research IT lead, Presenter C narrates and reads out chat answers. About 5 minutes. Script the beats, not the words.</p>
+    <p>Beat sheet (flowchart stage in brackets):</p>
+    <p>1. The ask [start]. Researcher: "I think I need the cloud." IT: "Before we pick a platform, what are you trying to do?"</p>
+    <p>2. The real problem [start]. Researcher describes two jobs: fine-tuning a model on storm imagery, and a public dashboard of damage estimates others can use.</p>
+    <p>3. The fit question [is the cloud the right tool?]. IT separates the two jobs: the fine-tuning is GPU-heavy and better on large GPUs elsewhere (campus or national resources); the dashboard is a good cloud fit (hosting a tool or dataset).</p>
+    <p>PAUSE 1, narrator: "In the chat: which of these two jobs would you send to the cloud?"</p>
+    <p>4. The route [is CloudBank the right route? and allocation]. IT: no credit card needed; a small ACCESS Explore award through CloudBank covers a dashboard; a one-page proposal.</p>
+    <p>5. The cost estimate [allocation]. IT sketches it with the rule-of-thumb prices: a laptop-class machine at about 10¢ an hour is about $73 a month if always on, plus storage. Well inside an Explore award (up to $10,000).</p>
+    <p>PAUSE 2, narrator: "In the chat: what is the one thing you would ask about before they launch anything?"</p>
+    <p>6. The exit [exit]. IT: "What happens to the dashboard when the award ends?" Researcher has not thought about it. IT suggests tagging from day one, and publishing the data and code so the work outlives the award.</p>
+    <p>Close: narrator hands to the decision-flowchart slide: "That was the whole flowchart. Here it is on one slide."</p>
+    <p>VERIFY: routing answers follow the eligibility slide (GPU-intensive work better elsewhere; hosting tools and datasets a good fit). The $73 a month figure is derived from the catalog cost slide (10¢ an hour × about 730 hours); the Explore ceiling is from the award-tiers slide.</p>
+  </aside>
+</section>

@@ -24,5 +24,5 @@ What to take back to your researchers
 - Ask the fit question before the platform question
 - Route through CloudBank: no card, one bill
 - Let AI draft setup; you verify it
-- Scale with Ray and SkyPilot, not rewrites
+- Choose the level, then scale
 - Set guardrails early; share what you build

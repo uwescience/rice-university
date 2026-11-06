@@ -1,0 +1,96 @@
+<section data-slide="pitfalls-table"
+         data-layout="custom"
+         data-brief-hash="aad7b6338edb"
+         data-generated-by="uw-slides@0.6.0"
+         aria-label="Slide 34: Six pitfalls"
+         class="slide">
+
+  <div class="layout">
+    <h1>Six pitfalls and how to head them off</h1>
+
+    <table>
+        <colgroup><col style="width:24%"><col style="width:34%"><col style="width:42%"></colgroup>
+        <thead><tr><th scope="col">Pitfall</th><th scope="col">What it looks like</th><th scope="col">What research IT can do</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Credits never used</th><td>Award granted, nothing launched</td><td>Book an onboarding call in week one</td></tr>
+          <tr><th scope="row">Learning curve underestimated</th><td>Months before a first result</td><td>Offer a starter template and office hours</td></tr>
+          <tr><th scope="row">Zombie instances</th><td>Bills grow after the work ends</td><td>Require tags, alerts and autostop</td></tr>
+          <tr><th scope="row">Leaked access keys</th><td>Unknown instances appear overnight</td><td>Use SSO and short-lived credentials</td></tr>
+          <tr><th scope="row">Wrong service</th><td>A big VM doing a managed service's job</td><td>Review the design before launch</td></tr>
+          <tr><th scope="row">Wrong storage</th><td>Hot storage for archives; heavy egress</td><td>Set lifecycle rules; compute in-region</td></tr>
+        </tbody>
+    </table>
+  </div>
+
+  <style>
+    section[data-slide="pitfalls-table"] {
+      --bg: var(--slide-bg-light);
+      --fg: var(--slide-text);
+      --fg-muted: var(--slide-text-muted);
+      --head: var(--slide-heading);
+      --panel: var(--slide-bg-subtle);
+      background: var(--bg);
+      color: var(--fg);
+    }
+
+    section[data-slide="pitfalls-table"]::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: var(--slide-accent-size);
+      background: var(--slide-accent);
+    }
+
+    section[data-slide="pitfalls-table"] .layout {
+      flex: 1;
+      min-width: 0;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      padding: clamp(2rem, 4vw, 4rem) clamp(2rem, 6vw, 7.5rem) clamp(2rem, 4vw, 4rem);
+    }
+
+    section[data-slide="pitfalls-table"] h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 3.6vw, 3.5rem);
+      font-weight: var(--slide-heading-weight);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      text-transform: var(--slide-heading-transform);
+      color: var(--head);
+      margin: 0 0 clamp(1rem, 2vw, 2rem);
+    }
+
+    section[data-slide="pitfalls-table"] table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: clamp(1.5rem, 1.5vw, 1.75rem);
+      line-height: 1.3;
+    }
+
+    section[data-slide="pitfalls-table"] th,
+    section[data-slide="pitfalls-table"] td {
+      text-align: left;
+      vertical-align: top;
+      padding: clamp(0.4rem, 0.7vw, 0.75rem) clamp(0.75rem, 1.2vw, 1.25rem);
+      border-bottom: 1px solid var(--fg-muted);
+    }
+
+    section[data-slide="pitfalls-table"] thead th {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--head);
+      background: var(--panel);
+      border-bottom: var(--slide-accent-size) solid var(--slide-accent);
+    }
+
+    section[data-slide="pitfalls-table"] tbody th {
+      font-weight: 700;
+      color: var(--head);
+    }
+  </style>
+  <aside class="notes">
+    <p>If the table is too dense to read from the back of the room, split it into two slides of three rows.</p>
+  </aside>
+</section>

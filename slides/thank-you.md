@@ -7,7 +7,7 @@ duration: 1
 section: "Wrap-up"
 params:
   message: "Thank You"
-  action: "Pick one researcher this month and walk them through the flowchart."
+  action: "Apply for credits and try one example at each level."
   url: "cloudbank.org"
 ---
 

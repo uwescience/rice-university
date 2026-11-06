@@ -11,7 +11,7 @@ params:
 ---
 
 # Key message
-Guiding a researcher Flowchart
+Guiding a researcher through the flowchart
 
 ## Slot: subtitle
 The conversation we have with every first-time cloud user

@@ -1,0 +1,141 @@
+<section data-slide="hpc-vs-cloud"
+         data-layout="comparison"
+         data-brief-hash="4cc3feec8c68"
+         data-generated-by="uw-slides@0.6.0"
+         aria-label="Slide 5: HPC and cloud"
+         class="slide">
+
+  <div class="layout">
+    <h1 data-slot="key-message">Your cluster and the cloud work together</h1>
+
+    <div class="columns">
+      <div class="column" data-slot="left">
+        <h2>HPC cluster</h2>
+        <ul>
+          <li>Shared queue, fixed hardware</li>
+          <li>Free at point of use</li>
+          <li>Tuned for tightly coupled MPI</li>
+          <li>Admins manage the software</li>
+        </ul>
+      </div>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <div class="column" data-slot="right">
+        <h2>Commercial cloud</h2>
+        <ul>
+          <li>On demand, any hardware</li>
+          <li>Pay per hour used</li>
+          <li>Managed services and APIs</li>
+          <li>Researcher controls the stack</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <style>
+    section[data-slide="hpc-vs-cloud"] {
+      --bg: var(--slide-bg-light);
+      --fg: var(--slide-text);
+      --fg-muted: var(--slide-text-muted);
+      --head: var(--slide-heading);
+      background: var(--bg);
+      color: var(--fg);
+    }
+
+    section[data-slide="hpc-vs-cloud"]::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: var(--slide-accent-size);
+      background: var(--slide-accent);
+    }
+
+    section[data-slide="hpc-vs-cloud"] .layout {
+      flex: 1;
+      min-width: 0;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      padding: clamp(2.5rem, 6vw, 6rem) clamp(2rem, 6vw, 7.5rem) clamp(3.5rem, 6vw, 6rem);
+    }
+
+    section[data-slide="hpc-vs-cloud"] h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 3.6vw, 3.5rem);
+      font-weight: var(--slide-heading-weight);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      text-transform: var(--slide-heading-transform);
+      color: var(--head);
+      margin: 0 0 var(--space-6);
+    }
+
+    section[data-slide="hpc-vs-cloud"] .columns {
+      flex: 1;
+      min-height: 0;
+      display: grid;
+      grid-template-columns: 1fr 2px 1fr;
+      gap: clamp(2rem, 4vw, 4rem);
+      align-items: start;
+    }
+
+    section[data-slide="hpc-vs-cloud"] .column {
+      min-width: 0;
+      font-size: clamp(1.5rem, 2.4vw, 2.375rem);
+      line-height: 1.4;
+    }
+
+    section[data-slide="hpc-vs-cloud"] .divider {
+      align-self: stretch;
+      background: var(--slide-accent);
+    }
+
+    section[data-slide="hpc-vs-cloud"] h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3vw, 2.875rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--head);
+      margin: 0 0 var(--space-3);
+    }
+
+    section[data-slide="hpc-vs-cloud"] ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    section[data-slide="hpc-vs-cloud"] li {
+      position: relative;
+      padding-left: 1.5em;
+      margin: 0 0 var(--space-4);
+    }
+
+    section[data-slide="hpc-vs-cloud"] li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 0.6em;
+      height: 0.6em;
+      border-radius: 50%;
+      background: var(--slide-accent);
+    }
+
+    section[data-slide="hpc-vs-cloud"] .source {
+      position: absolute;
+      left: clamp(2rem, 6vw, 7.5rem);
+      right: clamp(2rem, 6vw, 7.5rem);
+      bottom: clamp(1rem, 2.5vw, 2.5rem);
+      font-size: clamp(1rem, 1.1vw, 1.25rem);
+      line-height: 1.3;
+      color: var(--fg-muted);
+      margin: 0;
+    }
+  </style>
+  <aside class="notes">
+    <p>VERIFY: "Free at point of use" assumes Rice's research computing clusters do not charge researchers per core-hour; confirm with Rice's Center for Research Computing.</p>
+  </aside>
+</section>

@@ -6,7 +6,7 @@ layout_rationale: "The researcher's request is the main column; what to listen f
 objective: obj-2
 status: draft
 duration: 5
-section: "2. From question to exit"
+section: "2. Flowchart"
 ---
 
 # Key message

@@ -17,7 +17,7 @@ Where LLM work runs best depends on the task
 - When researchers talk about LLMs, they mean one of three jobs.
 - Calling a hosted model needs no GPUs at all. It is a service billed per use, and CloudBank dollars can pay for model access
 - Running an open model: batch jobs suit cluster GPUs, but a service that is always on suits the cloud
-- Large training runs need GPUs that sync constantly over fast networks, which is big-cluster territory; Part 2 covers where researchers can get that capacity
+- Large training runs need GPUs that sync constantly over fast networks, which is big-cluster territory: the national resources on the eligibility slide
 
 ## Slot: table
 | LLM task | Cluster | Cloud | Watch out for |

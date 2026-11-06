@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 tools/deckparse.py *)",
+      "Bash(python3 tools/resolve-catalog.py resolve *)",
+      "Bash(python3 tools/lint.py *)",
+      "Bash(./build.sh *)",
+      "Bash(./build-visuals.sh *)",
+      "Bash(./outline.sh *)",
+      "Bash(./lint.sh *)",
+      "Bash(./status.sh *)",
+      "Bash(printenv UW_SLIDES_HOME)",
+      "Edit(/content/**)",
+      "Edit(/slides/**)"
+    ]
+  }
+}
