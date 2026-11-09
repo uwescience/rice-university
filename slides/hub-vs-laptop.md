@@ -33,6 +33,5 @@ A shared hub replaces setup day
 - Data waits on the server
 
 ## Notes
-This is the only teaching slide; it replaces the former cloud-for-teaching slide. If time allows, add its point aloud: a module built on a shared hub runs unchanged for the next instructor or another institution, so materials outlive a single course (Part 5 returns to this idea of sharing).
 Trade-offs to name if asked: students need reliable internet, storage quotas and idle shutdowns can surprise them, and a hub is the wrong tool for a course that teaches local installation.
 VERIFY: "first hour lost to installs" is general experience, not from the provided sources; swap in a figure from your own workshops if you have one.
