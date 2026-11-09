@@ -35,8 +35,8 @@
 | 24 | genai-prompt | Ask for the guardrails up front | code | 2 |  | draft | obj-3 |
 | 25 | deploy-with-ai | Hands-on: deploy it with an AI assistant | exercise | 6 |  | draft | obj-3 |
 | 26 | scaling-divider | Thinking like a cloud engineer | section-divider | 1 |  | draft |  |
-| 27 | three-resources | Every cloud design starts with three resources | diagram | 2 |  | draft | obj-3 |
-| 28 | abstraction-levels | Choose how much of the stack you manage | custom | 3 |  | draft | obj-3 |
+| 27 | three-resources | Every cloud design starts with three resources | custom | 2 |  | draft (locked) | obj-3 |
+| 28 | abstraction-levels | Choose how much of the stack you manage | custom | 3 |  | draft (locked) | obj-3 |
 | 29 | ai-three-ways | One AI task at three levels | diagram | 3 |  | draft | obj-3 |
 | 30 | same-client-code | Switching levels can be a one-line change | code | 2 |  | draft | obj-3 |
 | 31 | skypilot-code | SkyPilot: describe the job, not the servers | code | 2 |  | draft | obj-3 |

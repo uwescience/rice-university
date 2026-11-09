@@ -1,26 +1,67 @@
 <section data-slide="abstraction-levels"
          data-layout="custom"
-         data-brief-hash="dd22cafd01b0"
-         data-generated-by="uw-slides@0.6.0"
-         aria-label="Slide 29: Levels of abstraction"
+         aria-label="Slide 28: Levels of abstraction"
          class="slide">
 
   <div class="layout">
-    <h1>Choose how much of the stack you manage</h1>
+    <h1 data-slot="key-message">Choose how much of the stack you manage</h1>
 
-    <div class="with-arrow">
-    <table>
-        <colgroup><col style="width:22%"><col style="width:24%"><col style="width:26%"><col style="width:28%"></colgroup>
-        <thead><tr><th scope="col">Level</th><th scope="col">You manage</th><th scope="col">Provider manages</th><th scope="col">AI example</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Managed infrastructure</th><td>OS, software, scaling</td><td>Hardware and network</td><td>vLLM on a GPU node</td></tr>
-          <tr><th scope="row">Managed platform</th><td>Your code and model choice</td><td>Servers, scaling, patching</td><td>A managed model endpoint</td></tr>
-          <tr><th scope="row">Managed service</th><td>Your requests</td><td>Everything else</td><td>A chat API</td></tr>
-        </tbody>
-    </table>
-      <div class="arrow"><span>More control</span><span class="shaft" aria-hidden="true"></span><span>More convenience</span></div>
+    <div class="axis" aria-hidden="true">
+      <span>More control</span>
+      <span class="shaft"></span>
+      <span>More convenience</span>
     </div>
+
+    <div class="stacks" data-slot="stacks">
+      <div class="stack">
+        <h2>Managed infrastructure</h2>
+        <p class="example">vLLM on a GPU node</p>
+        <ol>
+          <li class="you"><span class="sr">You manage: </span>Your requests</li>
+          <li class="you"><span class="sr">You manage: </span>Code and model choice</li>
+          <li class="you"><span class="sr">You manage: </span>Scaling and patching</li>
+          <li class="you"><span class="sr">You manage: </span>OS and software</li>
+          <li class="provider"><span class="sr">Provider manages: </span>Hardware and network</li>
+        </ol>
+      </div>
+
+      <div class="stack">
+        <h2>Managed platform</h2>
+        <p class="example">A managed model endpoint</p>
+        <ol>
+          <li class="you"><span class="sr">You manage: </span>Your requests</li>
+          <li class="you"><span class="sr">You manage: </span>Code and model choice</li>
+          <li class="provider"><span class="sr">Provider manages: </span>Scaling and patching</li>
+          <li class="provider"><span class="sr">Provider manages: </span>OS and software</li>
+          <li class="provider"><span class="sr">Provider manages: </span>Hardware and network</li>
+        </ol>
+      </div>
+
+      <div class="stack">
+        <h2>Managed service</h2>
+        <p class="example">A chat API</p>
+        <ol>
+          <li class="you"><span class="sr">You manage: </span>Your requests</li>
+          <li class="provider"><span class="sr">Provider manages: </span>Code and model choice</li>
+          <li class="provider"><span class="sr">Provider manages: </span>Scaling and patching</li>
+          <li class="provider"><span class="sr">Provider manages: </span>OS and software</li>
+          <li class="provider"><span class="sr">Provider manages: </span>Hardware and network</li>
+        </ol>
+      </div>
+    </div>
+
+    <ul class="legend">
+      <li><span class="swatch you" aria-hidden="true"></span>You manage</li>
+      <li><span class="swatch provider" aria-hidden="true"></span>Provider manages</li>
+    </ul>
   </div>
+
+  <aside class="notes">
+    <p>Every cloud offers the same three levels under different product names. Read the dark blocks: that is what your researcher owns. Moving right, the provider takes over layer by layer, trading staff time for a higher unit price.</p>
+    <p>Researchers from HPC default to the left column because it looks like the cluster; often a column further right is the better fit. CloudBank Classroom's JupyterHub is a platform you already met in Part 1.</p>
+    <p>Product names to say aloud if helpful, per level: on AWS, EC2, then SageMaker, then Bedrock; on Google Cloud, Compute Engine, then Vertex AI, then the Gemini API.</p>
+    <p>VERIFY: the product-to-level mapping above is the planner's; confirm it with the Part 4 presenter, since some products span two levels.</p>
+  </aside>
 
   <style>
     section[data-slide="abstraction-levels"] {
@@ -28,7 +69,12 @@
       --fg: var(--slide-text);
       --fg-muted: var(--slide-text-muted);
       --head: var(--slide-heading);
-      --panel: var(--slide-bg-subtle);
+      --you-bg: var(--slide-bg-dark);
+      --you-fg: var(--slide-text-on-dark);
+      --prov-bg: var(--slide-bg-subtle);
+      --prov-fg: var(--slide-text-muted);
+      --prov-line: var(--cb-gray-30);
+      --accent: var(--slide-accent);
       background: var(--bg);
       color: var(--fg);
     }
@@ -44,10 +90,12 @@
     section[data-slide="abstraction-levels"] .layout {
       flex: 1;
       min-width: 0;
-      min-height: 0;
+      /* reveal renders the section as a block, so claim the full height */
+      box-sizing: border-box;
+      min-height: 100%;
       display: flex;
       flex-direction: column;
-      padding: clamp(2rem, 4vw, 4rem) clamp(2rem, 6vw, 7.5rem) clamp(2rem, 4vw, 4rem);
+      padding: clamp(2.5rem, 6vw, 6rem) clamp(2rem, 6vw, 7.5rem) clamp(3.5rem, 6vw, 6rem);
     }
 
     section[data-slide="abstraction-levels"] h1 {
@@ -56,84 +104,144 @@
       font-weight: var(--slide-heading-weight);
       line-height: 1.1;
       letter-spacing: -0.01em;
-      text-transform: var(--slide-heading-transform);
       color: var(--head);
-      margin: 0 0 clamp(1rem, 2vw, 2rem);
+      margin: 0 0 var(--space-5);
     }
 
-    section[data-slide="abstraction-levels"] table {
-      width: 100%;
-      border-collapse: collapse;
-      table-layout: fixed;
-      font-size: clamp(1.5rem, 1.9vw, 2.25rem);
-      line-height: 1.3;
+    section[data-slide="abstraction-levels"] .sr {
+      position: absolute;
+      width: 1px; height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
     }
 
-    section[data-slide="abstraction-levels"] th,
-    section[data-slide="abstraction-levels"] td {
-      text-align: left;
-      vertical-align: top;
-      padding: clamp(0.75rem, 1.2vw, 1.5rem) clamp(0.75rem, 1.2vw, 1.25rem);
-      border-bottom: 1px solid var(--fg-muted);
-    }
-
-    section[data-slide="abstraction-levels"] thead th {
-      font-family: var(--font-display);
-      font-weight: 700;
-      color: var(--head);
-      background: var(--panel);
-      border-bottom: var(--slide-accent-size) solid var(--slide-accent);
-    }
-
-    section[data-slide="abstraction-levels"] tbody th {
-      font-weight: 700;
-      color: var(--head);
-    }
-
-    section[data-slide="abstraction-levels"] .with-arrow {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: clamp(0.75rem, 1.5vw, 2rem);
-      align-items: stretch;
-    }
-
-    section[data-slide="abstraction-levels"] .arrow {
+    /* ── Axis and legend ─────────────────────────────── */
+    section[data-slide="abstraction-levels"] .axis {
+      margin-top: auto;
+      margin-bottom: var(--space-4);
       display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      text-align: center;
-      width: clamp(7rem, 9vw, 11rem);
-      font-family: var(--font-display);
-      font-size: clamp(1.5rem, 1.5vw, 1.75rem);
-      font-weight: 800;
-      line-height: 1.15;
-      color: var(--head);
+      gap: var(--space-3);
+      font-size: clamp(1.5rem, 1.5vw, 1.625rem);
+      font-weight: 700;
+      color: var(--accent);
+      white-space: nowrap;
     }
 
-    section[data-slide="abstraction-levels"] .arrow .shaft {
+    section[data-slide="abstraction-levels"] .shaft {
       position: relative;
       flex: 1;
-      width: 4px;
-      margin: 0.5rem 0;
-      background: var(--slide-accent);
+      height: 3px;
+      background: var(--accent);
+      margin: 0 0.5rem;
     }
 
-    section[data-slide="abstraction-levels"] .arrow .shaft::after {
+    section[data-slide="abstraction-levels"] .shaft::before,
+    section[data-slide="abstraction-levels"] .shaft::after {
       content: "";
       position: absolute;
-      left: 50%;
-      bottom: -2px;
-      width: 1.1rem;
-      height: 1.1rem;
-      border-right: 4px solid var(--slide-accent);
-      border-bottom: 4px solid var(--slide-accent);
-      transform: translateX(-50%) rotate(45deg) translate(-35%, -35%);
-      transform-origin: center;
+      top: 50%;
+      width: 0.85rem;
+      height: 0.85rem;
+      border-top: 3px solid var(--accent);
+      border-right: 3px solid var(--accent);
+    }
+
+    section[data-slide="abstraction-levels"] .shaft::before {
+      left: -1px;
+      transform: translateY(-50%) rotate(-135deg);
+    }
+
+    section[data-slide="abstraction-levels"] .shaft::after {
+      right: -1px;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    section[data-slide="abstraction-levels"] .legend {
+      list-style: none;
+      display: flex;
+      gap: var(--space-4);
+      margin: var(--space-4) 0 auto;
+      padding: 0;
+      font-size: clamp(1.5rem, 1.4vw, 1.5rem);
+      color: var(--fg-muted);
+    }
+
+    section[data-slide="abstraction-levels"] .legend li {
+      display: flex;
+      align-items: center;
+      gap: var(--space-1);
+    }
+
+    section[data-slide="abstraction-levels"] .swatch {
+      width: 1.25em;
+      height: 1.25em;
+      border-radius: var(--radius-md);
+    }
+
+    section[data-slide="abstraction-levels"] .swatch.you { background: var(--you-bg); }
+    section[data-slide="abstraction-levels"] .swatch.provider {
+      background: var(--prov-bg);
+      border: 2px solid var(--prov-line);
+    }
+
+    /* ── Three stacks ────────────────────────────────────── */
+    section[data-slide="abstraction-levels"] .stacks {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(2rem, 3.5vw, 4rem);
+    }
+
+    section[data-slide="abstraction-levels"] .stack h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 2.2vw, 2.25rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--head);
+      margin: 0;
+    }
+
+    section[data-slide="abstraction-levels"] .example {
+      font-size: clamp(1.5rem, 1.6vw, 1.75rem);
+      line-height: 1.3;
+      color: var(--fg-muted);
+      margin: var(--space-1) 0 var(--space-3);
+    }
+
+    section[data-slide="abstraction-levels"] .stack ol {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+    }
+
+    section[data-slide="abstraction-levels"] .stack li {
+      font-size: clamp(1.5rem, 1.6vw, 1.75rem);
+      font-weight: 600;
+      line-height: 1.2;
+      padding: var(--space-2) var(--space-3);
+      border-radius: var(--radius-md);
+    }
+
+    section[data-slide="abstraction-levels"] .stack li.you {
+      background: var(--you-bg);
+      color: var(--you-fg);
+    }
+
+    section[data-slide="abstraction-levels"] .stack li.provider {
+      background: var(--prov-bg);
+      color: var(--prov-fg);
+      font-weight: 400;
+      box-shadow: inset 0 0 0 2px var(--prov-line);
+    }
+
+    /* Narrower screens: tighter layers */
+    @media (max-aspect-ratio: 3/2) {
+      section[data-slide="abstraction-levels"] .stacks { gap: var(--space-3); }
+      section[data-slide="abstraction-levels"] .stack li { padding: var(--space-1) var(--space-2); }
     }
   </style>
-  <aside class="notes">
-    <p>Product names to say aloud if helpful, per level: on AWS, EC2, then SageMaker, then Bedrock; on Google Cloud, Compute Engine, then Vertex AI, then the Gemini API.</p>
-    <p>VERIFY: the product-to-level mapping above is the planner's; confirm it with the Part 4 presenter, since some products span two levels.</p>
-  </aside>
 </section>
