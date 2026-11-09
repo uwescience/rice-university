@@ -3,3 +3,4 @@ build/
 *.swp
 *~
 .claude/settings.local.json
+*.pyc
